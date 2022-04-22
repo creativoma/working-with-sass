@@ -48,9 +48,44 @@ section#one {
         margin-bottom: 1rem;
     }
 
-    @include u.breakpoint(sm) {
+    & p {
+        margin-bottom: 10px;
+    }
+    
+    & button {
+        background: var(--pink);
+        text-transform: uppercase;
+        color: var(--white);
+        border: 0;
+        padding: 1rem 2rem;
+        font-size: u.rem(28);
+        cursor: pointer;
+        transition: all 250ms ease;
+        box-shadow: 4px 4px 0px var(--light-pink);
+
+        &:hover {
+            background: var(--light-pink);
+            box-shadow: 4px 4px 0px var(--pink);
+        }
+    }
+
+    @include u.breakpoint-min(sm) {
         .one__title {
             font-size: 2.2rem;
+        }
+    }
+    @include u.breakpoint-min(md) {
+        .one__title {
+            font-size: 3rem;
+        }
+    }
+    @include u.breakpoint-min(lg) {
+        .one__title {
+            font-size: 4rem;
+            color: var(--pink);
+        }
+        p {
+            font-size: 1.8rem;
         }
     }
 }
@@ -65,11 +100,31 @@ section#two {
     
     & img{
         width: 150px;
+        transition: all ease 250ms;        
     }
+    @include u.breakpoint-min(sm) {
+        img {
+            width: 200px;
+        }
+    }
+    @include u.breakpoint-min(md) {
+        img {
+            width: 250px;
+        }
+    }
+    @include u.breakpoint-min(lg) {
+        img {
+            width: 300px;
+        }
+    }  
 }
 
 footer{
     background-color: var(--pink);
     color: var(--white);
     padding: 2rem;
+
+    & p{
+        font-size: 1.2rem;
+    }
 }

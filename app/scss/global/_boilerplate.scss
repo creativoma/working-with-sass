@@ -38,21 +38,38 @@ header{
     background-position: center;
 }
 
-section{
+section#one {
     background: url(../../app/img/pattern.svg);
     color: var(--black);
     padding: 2rem;
-    flex: 1;
+    
+    & .one__title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    @include u.breakpoint(sm) {
+        .one__title {
+            font-size: 2.2rem;
+        }
+    }
 }
 
-section h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+section#two {
+    background: url(../../app/img/pattern.svg);
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 20px 20px 0px;
+    
+    & img{
+        width: 150px;
+    }
 }
 
 footer{
     background-color: var(--pink);
     color: var(--white);
-    
     padding: 2rem;
 }

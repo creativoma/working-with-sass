@@ -44,11 +44,12 @@ section#one {
     padding: 2rem;
     
     & .one__title {
-        font-size: 1.6rem;
+        font-size: u.rem(20);
         margin-bottom: 1rem;
     }
 
     & p {
+        font-size: u.rem(22);
         margin-bottom: 10px;
     }
     
@@ -58,7 +59,7 @@ section#one {
         color: var(--white);
         border: 0;
         padding: 1rem 2rem;
-        font-size: u.rem(28);
+        font-size: u.rem(28);  // funtcion from utils.scss
         cursor: pointer;
         transition: all 250ms ease;
         box-shadow: 4px 4px 0px var(--light-pink);
@@ -71,12 +72,12 @@ section#one {
 
     @include u.breakpoint-min(sm) {
         .one__title {
-            font-size: 2.2rem;
+            font-size: u.rem(30);
         }
     }
-    @include u.breakpoint-min(md) {
+    @include u.breakpoint-min(md) { //mixin from utils.scss
         .one__title {
-            font-size: 3rem;
+            font-size: u.rem(32);
         }
     }
     @include u.breakpoint-min(lg) {
